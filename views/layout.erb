@@ -3,30 +3,33 @@
 
 	<head>
 		<title></title>
-		<link text="text/css" type="stylesheet" href="../css/style.css"/>
+		<link type="text/css" rel="stylesheet" href="../css/style.css"/>
 		<script src="../javascript/javascript.js"></script>
 	</head>
 
 
 	<body>
-		<div id="banner"></div>
+		<div id="page_wrapper">
+			
+			<div id="banner"></div>
 
-		<div id="layout_wrapper">
-			<div id="nav_bar">
-				<ul>
+			<div id="layout_wrapper">
+				<div id="nav_bar" class="layout_item">
+					<ul>
+	
+						<li><a class="nav_btn" href="/profile">current user</a></li>
+						<li><a class="nav_btn" href="/settings">Settings</a></li>
 
-					<li><a class="nav_btn" href="/profile"><%= p "#{current_user.profile.fname} #{current_user.profile.lname}" %></a></li>
-					<li><a class="nav_btn" href="/settings">Settings</a></li>
-
-				</ul>
+					</ul>
+				</div>
+				<div class="layout_item">
+					<%= yield %>
+				</div>
 			</div>
 
-			<%= yield %>
-
+			<footer id="layout_footer">&copy; Franky & Ken 2014</footer>
 		</div>
-
-		<footer id="layout_footer">&copy; Franky & Ken 2014</footer>
-
+		
 	</body>
 
 </html>

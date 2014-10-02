@@ -1,0 +1,48 @@
+
+
+#page_wrapper {
+    width: 960px;
+    margin: 0 auto;
+}
+
+#banner {
+    width: 100%;
+    height: 350px;
+    background-image: url("../images/middle school.jpg");
+    background-size: 100% 350px;
+    background attachment: fixed;
+    background position: center;
+    background-repeat: no-repeat;
+}
+
+#layout_wrapper {
+    width: 100%;
+}
+
+.layout_item {
+    display: inline-block;
+    margin: 0;
+}
+
+#nav_bar {
+    width: 15%;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+.nav_btn {
+    text-decoration: none;
+}
+
+.nav_btn:hover {
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+}
+
+#layout_footer {
+    text-align: right;
+}
+
