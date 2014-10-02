@@ -1,0 +1,52 @@
+<div id="home_wrapper">
+    <div id="home_description" class="column">
+        <p id="home_describe_top" class="home_description_text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p class="home_description_text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    
+    <div id="home_login_wrapper" class="column">
+        
+        <div id="home_login">
+            <div id="home_login_label" class="home_login_signup"> Login </div>
+            
+            <form method="POST" action="/profile_check">
+                <label class="form_space" for="email">Email:</label>
+                	</br>
+                    <input class="form_space" type="text" name="email" placeholder="Bob@gmail.com"/>
+                    </br>
+                <label class="form_space" for="password">Password:</label>
+                	</br>
+                    <input class="form_space" type="password" name="password" placeholder="Password"/>
+                    </br>
+                <input class="form_space" type="submit" value="Login"/>
+
+            </form>    
+        </div>
+        
+        <div id="home_signup">
+            <div id="home_signup_label" class="home_login_signup"> Sign up! </div>
+            
+            <form method="POST" action="/profile_create">
+                    <input class="form_space" type="text" name="[post]email" placeholder="Email"/>
+                    </br>
+                    <input class="form_space" type="password" name="[post]password" placeholder="Password"/>
+                    </br>
+                    <input class="form_space" type="password" name="confirm_password" placeholder="Confirm Password"/> 
+                    </br>
+                    <input class="form_space" type="text" name="[post]username" placeholder="Enter a Username"/>
+                    </br>
+                    <input class="form_space" type="text" name="[post]fname" placeholder="Enter your first name."/>
+                    </br>
+                    <input class="form_space" type="text" name="[post]lname" placeholder="Enter your last name."/>
+                    </br>
+                <input class="form_space" type="submit" value="Sign Up"/>   
+                
+            </form>
+            
+        </div>
+        
+    </div>
+    
+    
+</div>
+
