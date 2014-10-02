@@ -1,0 +1,59 @@
+<div id="home_wrapper">
+    <div id="home_description">
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    
+    <div id="home_login_wrapper">
+        
+        <div id="home_login">
+            <div id="home_login_label"> Login </div>
+            
+            <form method="POST" action="/profile_check">
+                <label for="email">Email</label>
+                    <input type="text" name="email" placeholder="bob@gmail.com"/>
+                    </br>
+                <label for="password">Password</label>
+                    <input type="password" name="password" placeholder="password"/>
+                    </br>
+                <input type="submit"/>
+
+            </form>    
+        </div>
+        
+        <div id="home_signup">
+            <div id="home_signup_label"> Sign up! </div>
+            
+            <form method="POST" action="/profile_create">
+                <label for="email"> Email </label>
+                    <input type="text" name="[post]email" placeholder="bob@gmail.com"/>
+                    </br>
+                <label for="password">Password</label>
+                    <input type="password" name="[post]password" placeholder="password"/>
+                    </br>
+                    <input type="password" name="confirm_password" placeholder="confirm password"/> 
+                    </br>
+                <label for="username">Username</label>
+                    <input type="text" name="[post]username" placeholder="Enter a username"/>
+                    </br>
+                <label for="fname">First Name</label>
+                    <input type="text" name="[post]fname" placeholder="Enter your first name."/>
+                    </br>
+                <label for="lname">Last Name</label>
+                    <input type="text" name="[post]lname" placeholder="Enter your last name."/>
+                    </br>
+                <input type="submit"/>   
+                
+            </form>
+            
+        </div>
+        
+    </div>
+    
+    
+</div>
+
