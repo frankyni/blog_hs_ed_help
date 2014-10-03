@@ -110,11 +110,15 @@ li {
 
 /*Profile.erb CSS*/
 
+#profile_wrapper {
+
+}
+
 #profileName {
 	display: inline-block;
 }
 
-#profileName h1 {
+#profile_name h1 {
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
@@ -128,7 +132,7 @@ li {
 	margin: 25px 80px 25px 40px;
 }*/
 
-#profile_Post h1 {
+#profile_post h1 {
 	margin-top: 0;
 	margin-bottom: 20px;
 }
@@ -146,9 +150,17 @@ li {
 	font-size: 1.0em;
 }
 
-#profile_RecentPosts h1 {
+#profile_recentPosts h1 {
 	margin-top: 0;
 	margin-bottom: 20px
+}
+
+#profile_posts {
+
+}
+
+#profile_following {
+	
 }
 
 
