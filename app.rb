@@ -48,12 +48,11 @@ end
 
 post '/profile_create' do
 	if params[:confirm_password] == params[:post][:password]
-		params[:post][:created] = Time.now
 		params[:post][:fname] = params[:post][:fname].capitalize
 		params[:post][:lname] = params[:post][:lname].capitalize
 		@user = User.create(params[:post])
 		session[:user_id] = @user.id
-		flash[:notice] = "Welcome to Elp #{current_user.fullname}!"
+		flash[:notice] = "Welcome to Elp #{current_user.fullname}! #{current_user.created_on}"
 		redirect '/home'
 	else
 		flash[:notice] = "* Passwords do not match"
