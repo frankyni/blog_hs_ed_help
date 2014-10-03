@@ -36,9 +36,11 @@ post '/post_create' do
 	puts 'my params are' + params.inspect
 
 	if !params[:entry].empty? 
-		@post = Post.create(params[:post_in]) 
+		@post = Post.create(post_in: params[:entry]) 
+		redirect '/home'
 	else
 		flash[:alert] = "Please enter a post."
+		redirect '/home'
 	end
 
 end
