@@ -6,10 +6,10 @@ require 'rack-flash'
 require './models.rb'
 
 set :database, "sqlite3:example.sqlite3"
-
 enable :sessions
 use Rack::Flash, :sweep => true
 set :sessions => true
+configure(:development){set :database, "sqlite:///example.sqlite3"}
 
 get '/' do
   erb :landing
@@ -25,6 +25,10 @@ end
 
 get '/settings' do
   erb :settings
+end
+
+post 'profile_create' do
+
 end
 
 helpers do   
