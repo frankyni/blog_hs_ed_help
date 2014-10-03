@@ -16,7 +16,7 @@ get '/' do
 end
 
 get '/home' do
-  erb :home
+   erb :home
 end
 
 get '/profile' do
@@ -25,6 +25,14 @@ end
 
 get '/settings' do
   erb :settings
+end
+
+post '/post_create' do
+	puts 'my params are' + params.inspect
+
+	 
+
+
 end
 
 post 'profile_create' do
