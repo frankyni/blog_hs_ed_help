@@ -45,8 +45,10 @@ post 'profile_login' do
 		redirect '/home'
 	elsif @user && @user.password != params[:password]
 		flash[:alert] = "Incorrect password"
+		redirect '/'
 	else
 		flash[:alert] = "Unknown email"
+		redirect '/'
 	end
 end
 
