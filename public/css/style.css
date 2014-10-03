@@ -65,6 +65,7 @@ li {
     text-align: right;
     margin-top: 100px;
     background-color: none;
+    margin-right: 100px;
 }
 
 .column {
@@ -87,10 +88,12 @@ li {
 	margin-bottom: 25px;
 	text-indent: 30px;
 	font-size: 1.75em;
+	background-color: rgba(255,255,255,.7);
+	border-radius: 10px;
 }
 
 #home_describe_top {
-	padding-top: 50px;
+	margin-top: 50px;
 }
 
 .home_login_signup {
@@ -152,17 +155,25 @@ li {
 	font-size: 1.0em;
 }
 
+#profile_recentPostArea {
+	margin-left: 40px;
+	padding: 15px;
+	border-radius: 10px;
+	width: 650px;
+	background-color: rgba(255,255,255,.7);
+}
+
 #profile_recentPosts h1 {
 	margin-top: 0;
 	margin-bottom: 20px
 }
 
 #profile_posts {
-
+	font-size: 1.3em;
 }
 
 #profile_following {
-	
+
 }
 
 
