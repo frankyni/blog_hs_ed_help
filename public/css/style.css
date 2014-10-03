@@ -112,27 +112,57 @@ li {
 
 /*Profile.erb CSS*/
 
-#ProfileName {
+#profile_wrapper {
+
+}
+
+#profileName {
 	display: inline-block;
 }
 
-#ProfileName h1 {
+#profile_name h1 {
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
 
-#Profile_Pic {
-	/*display: inline-block;*/
+/*#Profile_Pic {   *later if needed
+	display: inline-block;
 	float: right;
 	border: 1px solid orange;
 	height: 200px;
 	width: 200px;
 	margin: 25px 80px 25px 40px;
+}*/
+
+#profile_post h1 {
+	margin-top: 0;
+	margin-bottom: 20px;
 }
 
-#Profile_RecentPosts h1 {
+#postEntry {
+	height: 20px;
+	margin-bottom: 10px;
+	border: 1.5px solid black;
+	font-size: 1.0em;
+	padding: 5px;
+}
+
+#profile_submit {
+	margin-bottom: 25px;
+	font-size: 1.0em;
+}
+
+#profile_recentPosts h1 {
 	margin-top: 0;
 	margin-bottom: 20px
+}
+
+#profile_posts {
+
+}
+
+#profile_following {
+	
 }
 
 
