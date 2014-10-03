@@ -28,10 +28,8 @@ get '/settings' do
 end
 
 post '/profile_create' do
-	# flash[:notice] = params.inspect
-	# flash[:notice] = params[:confirm_password]
-	# flash[:notice] = params[:post][:password]
 	if params[:confirm_password] == params[:post][:password]
+		params[:post][:created] = Time.now
 		@user = User.create(params[:post])
 		session[:user_id] = @user.id
 		flash[:notice] = "Welcome to Elp!"
