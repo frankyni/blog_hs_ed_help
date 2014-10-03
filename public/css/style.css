@@ -137,8 +137,36 @@ li {
 
 
 
+/*setting page CSS*/
 
+#settings_wrap {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	padding-left: 10px;
+}
 
+.settings_btn_wrap {
+	float: left;
+	height: 100px;
+	width: 275px;
+	margin-right: 50px;
+	padding-right: 65px;
+}
 
+.setting_text {
+	display: inline-block;
+	font-size: 1.5em;
+	
+}
 
+.setting_btn {
+	font-size: 1.1em;
+	float: right;
+	right: 0;
+}
+
+.setting_form_box {
+	display: none;
+	margin-top: 20px;
+}
 
