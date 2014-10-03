@@ -36,10 +36,10 @@ post '/post_create' do
 	puts 'my params are' + params.inspect
 
 	if !params[:entry].empty? 
-		@post = current_user.posts.create(post_in: params[:entry]) 
+		current_user.posts.create(post_in: params[:entry]) 
 		redirect '/home'
 	else
-		flash[:alert] = "Please enter a post."
+		flash[:notice] = "Please enter a post."
 		redirect '/home'
 	end
 
@@ -49,9 +49,11 @@ end
 post '/profile_create' do
 	if params[:confirm_password] == params[:post][:password]
 		params[:post][:created] = Time.now
+		params[:post][:fname] = params[:post][:fname].capitalize
+		params[:post][:lname] = params[:post][:lname].capitalize
 		@user = User.create(params[:post])
 		session[:user_id] = @user.id
-		flash[:notice] = "Welcome to Elp!"
+		flash[:notice] = "Welcome to Elp #{current_user.fullname}!"
 		redirect '/home'
 	else
 		flash[:notice] = "* Passwords do not match"

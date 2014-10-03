@@ -163,6 +163,8 @@ li {
 	border: 1.5px solid black;
 	font-size: 1.0em;
 	padding: 5px;
+	width: 700px;
+	border-radius: 5px;
 }
 
 #profile_submit {

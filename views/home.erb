@@ -1,11 +1,11 @@
 <div id="profile_wrapper">
 
-	<% if !flash.nil? %>
+	<% if !flash[:notice].nil? %>
 	<%= flash[:notice] %>
 	<% end %>
 
 	<div id="profile_name">
-		<h1> Profile Name </h1>
+		<h1><%= current_user.username %></h1>
 	</div>
 
 	<div id="profile_pic">
@@ -19,8 +19,7 @@
 	<div id="profile_postEntry">
 		
 		<form method="POST" action="/post_create">
-			<input id="postEntry" type="text" name="entry" placeholder="Enter your new post here." maxlength="150" size="100" /></br>
-
+			<input id="postEntry" type="text" name="entry" placeholder="Enter your new post here." maxlength="150"/></br>
 			<input id="profile_submit" type="submit" value="Submit"/>
 		</form>
 
@@ -32,20 +31,16 @@
 			<h1> Recent Posts </h1>
 		</div>
 
-		<div id="profile_posts">
 
-			
+		<% current_user.posts.each do |body| %>
 
-			<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit deserunt ducimus vero aperiam, facere, quibusdam iste.</p> -->
-
-
+		<div class="profile_posts">
+			<%= body.created_on %> <br/>
+			<%= body.post_in %>
 		</div>
 
+		<% end %>
+
 	</div>
-
-
-<!-- 	<div id="profile_following">
-		<h2> Who I'm Following ... </h2>
-	</div> -->
 
 </div>
