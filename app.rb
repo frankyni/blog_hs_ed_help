@@ -31,8 +31,8 @@ post 'profile_create' do
 	if params[:confirm_password] == params[:post[:password]]
 		@user = User.create(params[:post])
 		session[:user_id] = @user.id
-		redirect '/profile'
-		flash[:notice] = "Welcome to Elp"
+		redirect '/home'
+		flash[:notice] = "Welcome to Elp!"
 	else
 		flash[:alert] = "Passwords do not match, please reconfirm password"
 		redirect '/'
@@ -42,6 +42,13 @@ end
 post 'profile_login' do
 	@user = User.find_by_email[:email]
 	if @user && @user.password == params[:password]
+		redirect '/home'
+	elsif @user && @user.password != params[:password]
+		flash[:alert] = "Incorrect password"
+	else
+		flash[:alert] = "Unknown email"
+	end
+end
 
 helpers do   
   def current_user
