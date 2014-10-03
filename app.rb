@@ -27,27 +27,30 @@ get '/settings' do
   erb :settings
 end
 
-post 'profile_create' do
-	if params[:confirm_password] == params[:post[:password]]
+post '/profile_create' do
+	# flash[:notice] = params.inspect
+	# flash[:notice] = params[:confirm_password]
+	# flash[:notice] = params[:post][:password]
+	if params[:confirm_password] == params[:post][:password]
 		@user = User.create(params[:post])
 		session[:user_id] = @user.id
-		redirect '/home'
 		flash[:notice] = "Welcome to Elp!"
+		redirect '/home'
 	else
-		flash[:alert] = "Passwords do not match, please reconfirm password"
+		flash[:notice] = "* Passwords do not match"
 		redirect '/'
 	end
 end
 
-post 'profile_login' do
-	@user = User.find_by_email[:email]
+post '/profile_login' do
+	@user = User.find_by_email(params[:email])
 	if @user && @user.password == params[:password]
 		redirect '/home'
 	elsif @user && @user.password != params[:password]
-		flash[:alert] = "Incorrect password"
+		flash[:alert] = "* Incorrect password"
 		redirect '/'
 	else
-		flash[:alert] = "Unknown email"
+		flash[:alert] = "* Email does not exist"
 		redirect '/'
 	end
 end
@@ -57,4 +60,3 @@ helpers do
     session[:user_id].nil? ? nil : User.find(session[:user_id])
   end
 end
-
