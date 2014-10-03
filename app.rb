@@ -27,7 +27,7 @@ get '/settings' do
   erb :settings
 end
 
-helpers do
+helpers do   
   def current_user
     session[:user_id].nil? ? nil : User.find(session[:user_id])
   end
