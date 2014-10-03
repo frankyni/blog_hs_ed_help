@@ -9,7 +9,7 @@
         <div id="home_login">
             <div id="home_login_label" class="home_login_signup"> Login </div>
             
-            <form method="POST" action="/profile_check">
+            <form method="POST" action="/profile_login">
                 <label class="form_space" for="email">Email:</label>
                 	</br>
                     <input class="form_space" type="text" name="email" placeholder="Bob@gmail.com"/>
@@ -42,6 +42,10 @@
                 <input class="form_space" type="submit" value="Sign Up"/>   
                 
             </form>
+
+            <% if !flash[:alert].nil? %>
+            <%= flash[:alert] %>
+            <% end %>
             
         </div>
         

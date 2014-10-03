@@ -28,8 +28,20 @@ get '/settings' do
 end
 
 post 'profile_create' do
-
+	if params[:confirm_password] == params[:post[:password]]
+		@user = User.create(params[:post])
+		session[:user_id] = @user.id
+		redirect '/profile'
+		flash[:notice] = "Welcome to Elp"
+	else
+		flash[:alert] = "Passwords do not match, please reconfirm password"
+		redirect '/'
+	end
 end
+
+post 'profile_login' do
+	@user = User.find_by_email[:email]
+	if @user && @user.password == params[:password]
 
 helpers do   
   def current_user
