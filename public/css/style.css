@@ -225,5 +225,12 @@ li {
 
 .setting_form_box {
 	display: none;
-	margin-top: 20px;
+	margin-top: 10px;
+	padding-left: 20px;
+}
+
+.current_info {
+	margin-top: 10px;
+	padding-left: 20px;
+	font-size: 1.2em;
 }

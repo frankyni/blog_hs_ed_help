@@ -16,9 +16,11 @@
 			<div id="layout_wrapper">
 				<div id="nav_bar" class="layout_item">
 					<ul>
-	
-						<li><a class="nav_btn" href="/home">Current User</a></li>
+						<% if !current_user.nil? %>
+						<li><a class="nav_btn" href="/home"><%= current_user.fullname %></a></li>
+						<li><a class="nav_btn" href="/logout">Logout</a></li>
 						<li><a class="nav_btn" href="/settings">Settings</a></li>
+						<% end %>
 
 					</ul>
 				</div>

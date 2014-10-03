@@ -27,6 +27,10 @@ get '/settings' do
   erb :settings
 end
 
+get '/logout' do
+	session[:user_id] = nil
+	redirect '/'
+end
 
 post '/post_create' do
 	puts 'my params are' + params.inspect
@@ -56,6 +60,7 @@ end
 post '/profile_login' do
 	@user = User.find_by_email(params[:email])
 	if @user && @user.password == params[:password]
+		session[:user_id] = @user.id
 		redirect '/home'
 	elsif @user && @user.password != params[:password]
 		flash[:alert] = "* Incorrect password"
