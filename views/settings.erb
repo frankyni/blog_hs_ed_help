@@ -2,12 +2,31 @@
 
 <script>
 	$(document).ready(function() {
-		/*testing*/
+		
 		console.log('JS is working');
 		$("#setting_btn1").click(function(){
 			console.log('edit was clicked on');
-			$(".setting_form_box").toggle();
+			$("#settings_form1").toggle();
 		});
+
+		console.log('JS is working');
+		$("#setting_btn2").click(function(){
+			console.log('edit was clicked on');
+			$("#settings_form2").toggle();
+		});
+
+		console.log('JS is working');
+		$("#setting_btn3").click(function(){
+			console.log('edit was clicked on');
+			$("#settings_form3").toggle();
+		});
+
+		console.log('JS is working');
+		$("#setting_btn4").click(function(){
+			console.log('edit was clicked on');
+			$("#settings_form4").toggle();
+		});
+
 	});
 </script>
 
@@ -47,7 +66,7 @@
 	<div class="settings_btn_wrap">
 
 		<div class="setting_text">Password</div>
-		<div id="setting_btn1" class="setting_btn setting_text">change</div>
+		<div id="setting_btn4" class="setting_btn setting_text">change</div>
 		<form id="settings_form4" class="setting_form_box" method="POST" action="/settings_change">
 			<input type="password" name="password_confirm" placeholder="Old Password"/>
 			<input type="password" name="password" placeholder="New Password"/>
