@@ -225,11 +225,14 @@ li {
 }
 
 .settings_btn_wrap {
+	border: 1px solid black;
+	border-radius: 5px;
+	background-color: rgba(255,255,255,.7);
 	float: left;
 	height: 100px;
 	width: 275px;
 	margin-right: 50px;
-	padding-right: 65px;
+	padding: 10px;
 }
 
 .setting_text {
