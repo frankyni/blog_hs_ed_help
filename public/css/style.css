@@ -245,6 +245,15 @@ li {
 	font-size: 1.1em;
 	float: right;
 	right: 0;
+	padding: 2px 5px 2px 5px;
+	border-radius: 5px;
+	background-color: #aaa;
+	cursor: pointer;
+	box-shadow: 0px 0px 1px 1px #888;
+}
+
+.setting_btn:active {
+	box-shadow: 0px 0px 10px #888 inset;
 }
 
 .setting_form_box {
